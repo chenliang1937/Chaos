@@ -1,0 +1,67 @@
+package com.meiya.chaos.widget;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.View;
+
+import com.meiya.chaos.R;
+
+/**
+ * Created by chenliang3 on 2016/5/15.
+ */
+public class JCVideoPlayerSimple extends JCVideoPlayer {
+
+    public JCVideoPlayerSimple(Context context) {
+        super(context);
+    }
+
+    public JCVideoPlayerSimple(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.jc_layout_base;
+    }
+
+    @Override
+    public void setUp(String url, Object... objects) {
+        super.setUp(url, objects);
+        if (IF_CURRENT_IS_FULLSCREEN) {
+            ivFullScreen.setImageResource(R.drawable.jc_shrink);
+        } else {
+            ivFullScreen.setImageResource(R.drawable.jc_enlarge);
+        }
+    }
+
+    @Override
+    public void setStateAndUi(int state) {
+        super.setStateAndUi(state);
+        switch (CURRENT_STATE) {
+            case CURRENT_STATE_NORMAL:
+                ivStart.setVisibility(View.VISIBLE);
+                break;
+            case CURRENT_STATE_PREPAREING:
+                ivStart.setVisibility(View.INVISIBLE);
+                break;
+            case CURRENT_STATE_PLAYING:
+                ivStart.setVisibility(View.VISIBLE);
+                break;
+            case CURRENT_STATE_PAUSE:
+                break;
+            case CURRENT_STATE_ERROR:
+                break;
+        }
+        updateStartImage();
+    }
+
+    private void updateStartImage() {
+        if (CURRENT_STATE == CURRENT_STATE_PLAYING) {
+            ivStart.setImageResource(R.drawable.jc_click_pause_selector);
+        } else if (CURRENT_STATE == CURRENT_STATE_ERROR) {
+            ivStart.setImageResource(R.drawable.jc_click_error_selector);
+        } else {
+            ivStart.setImageResource(R.drawable.jc_click_play_selector);
+        }
+    }
+}

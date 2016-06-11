@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionSheetStyle">@style/ActionSheetStyleiOS7</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.NoActionBar.Trans">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/SlideRightAnimation</item>
+    </style>
+    <style name="AppTheme.NoActionBar.FullScreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyToolbarTextStyle" parent="@android:style/TextAppearance.DeviceDefault">
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="jc_style_dialog_progress" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/jc_dialog_progress_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/jc_popup_toast_anim</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="jc_popup_toast_anim" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="jc_vertical_progressBar">
+        <item name="android:maxWidth">12.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/jc_volume_progress_bg</item>
+        <item name="android:indeterminateDuration">3500</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:minWidth">1.0dip</item>
+    </style>
+
+    <style name="ToolbarTitleAppearance">
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- iOS7 Style -->
+    <style name="ActionSheetStyleiOS7">
+        <item name="actionSheetBackground">@android:color/transparent</item>
+        <item name="cancelButtonBackground">@drawable/slt_as_ios7_cancel_bt</item>
+        <item name="otherButtonTopBackground">@drawable/slt_as_ios7_other_bt_top</item>
+        <item name="otherButtonMiddleBackground">@drawable/slt_as_ios7_other_bt_middle</item>
+        <item name="otherButtonBottomBackground">@drawable/slt_as_ios7_other_bt_bottom</item>
+        <item name="otherButtonSingleBackground">@drawable/slt_as_ios7_other_bt_single</item>
+        <item name="cancelButtonTextColor">#1E82FF</item>
+        <item name="otherButtonTextColor">#1E82FF</item>
+        <item name="actionSheetPadding">10dp</item>
+        <item name="otherButtonSpacing">0dp</item>
+        <item name="cancelButtonMarginTop">10dp</item>
+        <item name="actionSheetTextSize">12sp</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/pretty_red</item>
+    </style>
+
+</resources>

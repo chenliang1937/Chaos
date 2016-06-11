@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ripple="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/navig_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextAppearance="@style/ToolbarTitleAppearance"
+        android:background="?attr/colorPrimaryDark" />
+
+    <RelativeLayout
+        android:id="@+id/navig_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_96"
+        android:layout_below="@+id/navig_toolbar"
+        android:background="@mipmap/ic_mapbg1">
+
+        <ImageView
+            android:id="@+id/navig_2dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:src="@mipmap/ic_2dots"/>
+
+        <com.andexert.library.RippleView
+            android:id="@+id/navig_swap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_16"
+            ripple:rv_type="rectangle"
+            ripple:rv_color="@color/ripple_color"
+            ripple:rv_rippleDuration="200">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_swap"/>
+
+        </com.andexert.library.RippleView>
+
+        <View
+            android:id="@+id/navig_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.1"
+            android:layout_toRightOf="@+id/navig_2dots"
+            android:layout_toLeftOf="@+id/navig_swap"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:background="@color/pretty_gray"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/navig_2dots"
+            android:layout_toLeftOf="@+id/navig_swap"
+            android:layout_above="@+id/navig_line"
+            android:textColorHint="@color/toolbar_title_color"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12">
+
+            <EditText
+                android:id="@+id/navig_your_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pretty_gray"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingTop="@dimen/dp_5"
+                android:hint="Your Location"
+                android:background="@null"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/navig_2dots"
+            android:layout_toLeftOf="@+id/navig_swap"
+            android:layout_below="@+id/navig_line"
+            android:textColorHint="@color/toolbar_title_color"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12">
+
+            <EditText
+                android:id="@+id/navig_you_wantgo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/pretty_gray"
+                android:paddingLeft="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingTop="@dimen/dp_5"
+                android:hint="The Destination"
+                android:background="@null"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/navig_view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:layout_below="@+id/navig_layout1"
+        android:background="@mipmap/ic_mapbg2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/navig_view1"
+        android:paddingTop="@dimen/dp_24">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_24">
+
+            <ImageView
+                android:id="@+id/navig_icon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:src="@mipmap/ic_car_purple"/>
+
+            <TextView
+                android:id="@+id/navig_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_18"
+                android:textColor="@color/text_color"
+                android:layout_toRightOf="@+id/navig_icon1"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/navig_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_18"
+                android:textColor="@color/pretty_red"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_12"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/navig_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/navig_text1"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_toRightOf="@+id/navig_icon1"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/half_black"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/navig_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/navig_text2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_12"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/half_black"
+                android:text=""/>
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/navig_map"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_150"
+                android:layout_below="@+id/navig_text3"
+                android:layout_toRightOf="@+id/navig_icon1"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_marginLeft="@dimen/dp_12">
+            </com.amap.api.maps.MapView>
+
+            <View
+                android:id="@+id/navig_line1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0.1"
+                android:layout_below="@+id/navig_map"
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="@color/grey"/>
+
+            <com.meiya.chaos.widget.NewListView
+                android:id="@+id/navig_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/grey"
+                android:dividerHeight="@dimen/dp_0.1"
+                android:layout_below="@+id/navig_line1"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.gigamole.library.NavigationTabBar
+        android:id="@+id/navig_navitabbar"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_48"
+        android:background="@drawable/bg_round_circle"
+        android:layout_below="@+id/navig_layout1"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_16"
+        app:ntb_animation_duration="400"
+        app:ntb_preview_colors="@array/red_wine"
+        app:ntb_corners_radius="50dp"
+        app:ntb_active_color="#8d88e4"
+        app:ntb_inactive_color="#dddfec"/>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/navig_build"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/navig_layout1"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_16"
+        ripple:rv_type="rectangle"
+        ripple:rv_color="@color/ripple_color"
+        ripple:rv_rippleDuration="200">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_12"
+            android:background="@drawable/bg_round_circle"
+            android:src="@mipmap/ic_build"/>
+
+    </com.andexert.library.RippleView>
+
+    <ProgressBar
+        android:id="@+id/navig_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

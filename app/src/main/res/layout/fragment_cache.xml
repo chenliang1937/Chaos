@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/cache_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_5">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/cache_loadTimeTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/cache_loadBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:background="@color/pretty_red"
+            android:text="加载"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/cache_swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cache_layout1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cache_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/cache_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:layout_alignParentBottom="true"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/clearMemoryCacheBt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_5"
+            android:background="@color/pretty_red"
+            android:text="清除内存缓存"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/clearMemoryAndDiskCacheBt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_40"
+            android:background="@color/pretty_red"
+            android:text="清空内存和磁盘缓存"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

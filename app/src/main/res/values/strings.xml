@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CHAOS</string>
+    <string name="action_search">Search</string>
+
+    <string name="action_favorite">收藏</string>
+    <string name="action_share">分享</string>
+
+    <string name="page_with_number">第%s页</string>
+    <string name="got_data">获取到的数据：\nID：%1$d\n用户名：%2$s</string>
+    <string name="got_token_and_data">token:%1$s\n\n获取到的数据：\nID：%2$d\n用户名：%3$s</string>
+    <string name="loading_time_and_source">耗时：%1$sms(从%2$s)</string>
+</resources>

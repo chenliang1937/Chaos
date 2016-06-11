@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dp_16"
+    android:paddingRight="@dimen/dp_16"
+    android:paddingTop="@dimen/dp_5">
+
+    <TextView
+        android:id="@+id/date_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp_14"
+        android:text="day by day"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.1"
+        android:layout_below="@+id/date_item_tv"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@color/colorAccent"/>
+
+</RelativeLayout>

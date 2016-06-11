@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/temp_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_96"
+        android:background="?attr/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/temp_2dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:src="@mipmap/ic_2dots"/>
+
+        <ImageView
+            android:id="@+id/temp_swap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_16"
+            android:src="@mipmap/ic_swap"/>
+
+        <View
+            android:id="@+id/temp_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0.1"
+            android:layout_toRightOf="@+id/temp_2dots"
+            android:layout_toLeftOf="@+id/temp_swap"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:background="@color/pretty_gray"/>
+
+        <EditText
+            android:id="@+id/temp_your_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="@color/pretty_gray"
+            android:layout_toRightOf="@+id/temp_2dots"
+            android:layout_toLeftOf="@+id/temp_swap"
+            android:layout_above="@+id/temp_line"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_12"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_5"
+            android:hint="Your Location"
+            android:background="@null"/>
+
+        <EditText
+            android:id="@+id/temp_you_wantgo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="@color/pretty_gray"
+            android:layout_toRightOf="@+id/temp_2dots"
+            android:layout_toLeftOf="@+id/temp_swap"
+            android:layout_below="@+id/temp_line"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_12"
+            android:paddingLeft="@dimen/dp_12"
+            android:paddingRight="@dimen/dp_12"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_5"
+            android:hint="The Destination"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:layout_below="@+id/temp_layout1"
+        android:background="?attr/colorPrimaryDark"/>
+
+    <com.gigamole.library.NavigationTabBar
+        android:id="@+id/temp_navitabbar"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_40"
+        android:background="@drawable/bg_round_circle"
+        android:layout_below="@+id/temp_layout1"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginLeft="@dimen/dp_16"
+        app:ntb_animation_duration="400"
+        app:ntb_preview_colors="@array/red_wine"
+        app:ntb_corners_radius="50dp"
+        app:ntb_active_color="#8d88e4"
+        app:ntb_inactive_color="#dddfec"/>
+
+    <ImageView
+        android:id="@+id/temp_build"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round_circle"
+        android:layout_below="@+id/temp_layout1"
+        android:layout_marginTop="@dimen/dp_8"
+        android:padding="@dimen/dp_8"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_16"
+        android:src="@mipmap/ic_build"/>
+
+</RelativeLayout>
+
+<!--
+    ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
+    models.add(new NavigationTabBar.Model(getResources().getDrawable(R.mipmap.ic_walk), Color.WHITE));
+    models.add(new NavigationTabBar.Model(getResources().getDrawable(R.mipmap.ic_bike), Color.WHITE));
+    models.add(new NavigationTabBar.Model(getResources().getDrawable(R.mipmap.ic_car), Color.WHITE));
+    models.add(new NavigationTabBar.Model(getResources().getDrawable(R.mipmap.ic_bus), Color.WHITE));
+    navigationTabBar.setModels(models);
+    navigationTabBar.setModelIndex(2,true);-->

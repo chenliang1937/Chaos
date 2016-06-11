@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/common_error_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="哎呀，出错了"/>
+
+    <Button
+        android:id="@+id/retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/common_error_tv"
+        style="?android:borderlessButtonStyle"
+        android:text="重试"/>
+
+</RelativeLayout>

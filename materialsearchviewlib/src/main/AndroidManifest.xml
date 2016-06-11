@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.meiya.materialsearchviewlib">
+
+    <application>
+
+        <meta-data
+            android:name="IFLYTEK_APPKEY"
+            android:value="'5750d732'" />
+        <meta-data
+            android:name="IFLYTEK_CHANNEL"
+            android:value="Chaos" />
+
+    </application>
+
+</manifest>

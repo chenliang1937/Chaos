@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/token_swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200">
+
+        <TextView
+            android:id="@+id/tokenTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#11333333"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/token_loadBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_below="@+id/token_swiperefresh"
+        android:background="@color/pretty_red"
+        android:text="请求数据"/>
+
+</RelativeLayout>
