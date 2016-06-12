@@ -1,0 +1,9 @@
+Chaos
+====
+简介
+----
+这是一个新闻阅读、视屏播放、图片浏览的app
+效果
+----
+![screenshot](https://github.com/chenliang1937/Chaos/blob/master/screenshot/screenshoot1.gif)
+![screenshot](https://github.com/chenliang1937/Chaos/blob/master/screenshot/screenshot2.gif)
