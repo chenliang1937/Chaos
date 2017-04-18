@@ -3,9 +3,9 @@ Chaos
 简介
 ----
 
-基于Material Design + RxJava + Retrofit + greendao + Glide
+Material Design + RxJava + Retrofit + greendao + Glide
 
-出于学习的目的做了这款Material Design风格的应用，可以阅读知乎新闻、播放网易视屏、浏览Gank图片等，集成了讯飞语音输入、百度地图API实现路线查找
+一款Material Design风格的应用，可以阅读新闻、播放视屏、浏览图片等，集成了讯飞语音输入、高德地图API实现路线查找<br>
 
 效果
 ----
